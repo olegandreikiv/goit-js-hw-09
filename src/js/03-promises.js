@@ -28,8 +28,12 @@ function onPromiseCreate(e){
   console.log(valueDelay, step, amount );
 
   // Запускаємо повідомлення згідно кількості amount
-  for (let i = 1; i <= amount; i += 1){
+  for (let i = 0; i <= amount - 1; i += 1){
     let promiseDelay = valueDelay + step * i; // рахуємо крок між повідомленнями
+
+    if (i === 0) {
+      promiseDelay = valueDelay; // заміна затримки першого промісу
+    }
 
     createPromise(i, promiseDelay) 
     .then(({ position, delay }) => {

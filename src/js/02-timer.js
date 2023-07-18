@@ -21,6 +21,7 @@ btnStart.disabled = true; // початковий стан кнопки: вим�
 btnStart.style.background = 'white';
 let countdown ; // Змінна для збереження часу
 const TIMER_DELAY = 1000;
+let timerId;
 
 //  Підключаємо календаря в інпут
 const options = {
@@ -82,7 +83,6 @@ function startCoint() {
   
     
     timerId = setInterval(() => {
-      let timerId = 0;
 
         // перевірка таймера > секунди
         if (countdown >= 999) {
@@ -120,6 +120,3 @@ function padStart(evt){
     minutes.textContent = evt.minutes;
     seconds.textContent = evt.seconds;
 }
-
-
-// test
