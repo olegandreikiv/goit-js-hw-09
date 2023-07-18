@@ -79,7 +79,10 @@ function startCoint() {
 
 
     // таймер відліку часу
+  
+    
     timerId = setInterval(() => {
+      let timerId = 0;
 
         // перевірка таймера > секунди
         if (countdown >= 999) {
